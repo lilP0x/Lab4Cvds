@@ -1,6 +1,6 @@
 package hangman.model;
 
-public abstract class OriginScore implements GameScore{
+public class OriginScore implements GameScore{
 
     @Override
     public int calculateScore(int correctCount, int incorrectCount) {
