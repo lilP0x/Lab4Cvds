@@ -84,6 +84,8 @@ public class GameScoreTest {
         //Asserts
         Assert.assertEquals(0,result);
     }
+
+
     @Test
     public void powerScoreShould(){
         GameScore gameScore = new BonusScore();

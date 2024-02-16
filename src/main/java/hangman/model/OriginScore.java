@@ -9,7 +9,7 @@ public  class OriginScore implements GameScore{
         if(incorrectCount != 0 && score != 0){
             score = score - incorrectCount*10;
             if(score < 0){
-                return 0;
+                score = 0;
             }
         }
 
