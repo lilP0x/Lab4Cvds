@@ -6,4 +6,9 @@ public class BonusScore implements GameScore {
     public int calculateScore(int correctCount, int incorrectCount) {
         return 0;
     }
+
+    @Override
+    public void restart() {
+
+    }
 }
