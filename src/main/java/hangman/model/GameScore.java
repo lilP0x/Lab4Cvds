@@ -1,9 +1,7 @@
 package hangman.model;
+import hangman.model.ModelException;
 
 public interface GameScore {
-
-    int calculateScore(int correctCount, int incorrectCount);
-
-    //Este metodo reinicia el marcador
+    public int calculateScore(int correctCount, int incorrectCount) throws ModelException;
     void restart();
 }

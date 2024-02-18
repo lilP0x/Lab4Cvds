@@ -1,9 +1,13 @@
 package hangman.model;
+import hangman.model.ModelException;
 
 public class BonusScore implements GameScore {
     private int score = 0;
     @Override
-    public int calculateScore(int correctCount, int incorrectCount) {
+    public int calculateScore(int correctCount, int incorrectCount)throws ModelException {
+        if (correctCount < 0 || incorrectCount < 0) {
+            throw new ModelException("Parámetros incorrectos: correctCount e incorrectCount deben ser no negativos.");
+        }
 
         if(correctCount != 0){
             score = score + correctCount*10;

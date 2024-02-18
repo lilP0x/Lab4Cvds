@@ -5,11 +5,12 @@ import hangman.model.BonusScore;
 import hangman.model.GameScore;
 import hangman.model.OriginScore;
 import hangman.model.PowerScore;
+import hangman.model.ModelException;
 
 import org.checkerframework.checker.units.qual.A;
 import org.junit.Assert;
 import org.junit.Test;
-
+import hangman.model.ModelException;
 
 public class GameScoreTest {
     /*
@@ -31,7 +32,7 @@ public class GameScoreTest {
      */
 
     @Test
-    public void originalScoreShouldReturnPerfectScore(){
+    public void originalScoreShouldReturnPerfectScore() throws ModelException {
         GameScore gameScore = new OriginScore();
 
         //Call method
@@ -45,9 +46,8 @@ public class GameScoreTest {
         Assert.assertEquals(0,result2);
     }
 
-
     @Test
-    public void originalScoreShouldNotReturnPerfectScore(){
+    public void originalScoreShouldNotReturnPerfectScore() throws ModelException {
 
         GameScore gameScore = new OriginScore();
 
@@ -65,11 +65,11 @@ public class GameScoreTest {
         Assert.assertEquals(50,result1);
 
     }
-
+    
     @Test
-    public void bonusScoreShouldInitializeGameInZero(){
+    public void bonusScoreShouldInitializeGameInZero() throws ModelException{
 
-        GameScore gameScore = new BonusScore();
+        GameScore gameScore = new BonusScore() ;
         //Call method
         int result = gameScore.calculateScore(0,0);
         int result1 = gameScore.calculateScore(1,1);
@@ -79,7 +79,7 @@ public class GameScoreTest {
     }
     
     @Test
-    public void bonusScoreShouldNotDecreaseScore(){
+    public void bonusScoreShouldNotDecreaseScore() throws ModelException{
         GameScore gameScore = new BonusScore();
         //Call method
         int result = gameScore.calculateScore(0,3);
@@ -89,7 +89,7 @@ public class GameScoreTest {
 
     
     @Test
-    public void powerScoreShould(){
+    public void powerScoreShould() throws ModelException{
         GameScore gameScore = new PowerScore();
         //Call method
         int result = gameScore.calculateScore(0,3);
@@ -102,7 +102,7 @@ public class GameScoreTest {
     }
     
     @Test
-    public void powerScoreShouldNotOvercome500(){
+    public void powerScoreShouldNotOvercome500()throws ModelException{
         GameScore gameScore = new PowerScore();
         //Call method
         int result = gameScore.calculateScore(4,1);
