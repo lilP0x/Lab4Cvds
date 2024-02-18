@@ -4,6 +4,8 @@ package hangman;
 import hangman.model.BonusScore;
 import hangman.model.GameScore;
 import hangman.model.OriginScore;
+import hangman.model.PowerScore;
+
 import org.checkerframework.checker.units.qual.A;
 import org.junit.Assert;
 import org.junit.Test;
@@ -75,7 +77,7 @@ public class GameScoreTest {
         Assert.assertEquals(0,result);
         Assert.assertEquals(5,result1);
     }
-/*
+    
     @Test
     public void bonusScoreShouldNotDecreaseScore(){
         GameScore gameScore = new BonusScore();
@@ -85,10 +87,10 @@ public class GameScoreTest {
         Assert.assertEquals(0,result);
     }
 
-
+    
     @Test
     public void powerScoreShould(){
-        GameScore gameScore = new BonusScore();
+        GameScore gameScore = new PowerScore();
         //Call method
         int result = gameScore.calculateScore(0,3);
         int result1 = gameScore.calculateScore(3,0);
@@ -98,10 +100,10 @@ public class GameScoreTest {
         Assert.assertEquals(125,result1);
 
     }
-
+    
     @Test
     public void powerScoreShouldNotOvercome500(){
-        GameScore gameScore = new BonusScore();
+        GameScore gameScore = new PowerScore();
         //Call method
         int result = gameScore.calculateScore(4,1);
         int result1 = gameScore.calculateScore(1,1);
@@ -111,5 +113,5 @@ public class GameScoreTest {
         Assert.assertEquals(0,result1);
 
     }
- */
+    
 }
