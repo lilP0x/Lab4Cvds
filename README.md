@@ -3,7 +3,7 @@
 ### Ciclo de Vida de Desarrollo de Software
 
 ### Desarrollo Dirigido por Pruebas + DIP + DI + Contenedores Livianos
-
+##Nombres: Laura Rodríguez / Juan Pablo Fernandez
 Para este taller se va a trabajar sobre el juego del ahorcado.
 
 El sistema actual de puntuación del juego comienza en 100 puntos y va
